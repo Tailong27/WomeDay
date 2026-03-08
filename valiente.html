@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi valiente Marilin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9d4edd; /* Morado vibrante */
+            --secondary: #7b2cbf; /* Morado oscuro */
+            --accent: #e0aaff; /* Morado claro */
+            --glass: rgba(15, 0, 30, 0.75);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #050505;
+            background-image: url('https://apod.nasa.gov/apod/image/0509/AngelNebula_mandel_f1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+            color: #ffffff;
+        }
+
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            box-sizing: border-box;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .active { display: flex; }
+
+        .content-box {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 30px;
+            border: 2px solid var(--primary);
+            max-width: 850px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(157, 78, 221, 0.3);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        h1 { 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 3.5rem; 
+            color: var(--accent); 
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(224, 170, 255, 0.5);
+        }
+
+        p { 
+            font-size: 1.25rem; 
+            line-height: 1.8; 
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .highlight { color: var(--primary); font-weight: 800; }
+
+        .btn-nav {
+            position: fixed;
+            bottom: 40px;
+            padding: 15px 40px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 800;
+            transition: 0.4s;
+            z-index: 100;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 20px rgba(157, 78, 221, 0.5);
+        }
+
+        .btn-nav:hover { background: var(--secondary); transform: translateY(-5px); box-shadow: 0 8px 25px rgba(157, 78, 221, 0.8); }
+        .next { right: 50px; }
+        .prev { left: 50px; }
+
+        .lotus {
+            font-size: 50px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px var(--accent));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        #gift-container {
+            display: none;
+            margin-top: 20px;
+            animation: expand 1s ease-out;
+        }
+
+        /* Ajuste de la imagen para que no rompa el fondo */
+        .gift-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 350px;
+            border-radius: 20px;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 20px var(--primary);
+            margin-top: 15px;
+            object-fit: contain;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes expand { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide active">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Marilin, ojitos de galaxia</h1>
+            <p>El fondo que ves no es una simple imagen. Es la <span class="highlight">Nebulosa del Ángel</span>, capturada por la NASA el 29 de septiembre de 2005, el día en que naciste. El universo estaba creando una obra de arte en el cielo mientras la tierra recibía a la mujer más valiente que he conocido.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Tus ojos: Mi Universo</h1>
+            <p>Tus ojos son como nebulosas: profundos, llenos de misterio y de una luz que solo existe en las estrellas más brillantes. Al igual que el universo, tienen una inmensidad que me cautiva; en tu mirada encuentro la paz y la fuerza que me hace amarte cada día más.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Una vida de lucha</h1>
+            <p>Sé que tu camino no ha sido de pétalos de rosa. Me duele saber las batallas silenciosas que has librado desde tan joven. Has pasado por momentos oscuros que habrían apagado a cualquiera, pero tú, mi niña, has sabido transformar ese dolor en luz.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Resiliencia como el Loto</h1>
+            <p>Eres como tu flor favorita: <span class="highlight">La Flor de Loto</span>. Aunque te ha tocado nacer en situaciones difíciles, has logrado emerger del lodo para florecer con una pureza y una belleza que dejan a cualquiera sin aliento. Tu valentía es tu mayor tesoro.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Orgullo Mexicano</h1>
+            <p>Como las mujeres más fuertes de tu tierra, tienes esa resiliencia inquebrantable. Tienes el coraje de las guerreras mexicanas que saben levantarse después de cada caída con la frente más en alto que antes.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Tu bondad intacta</h1>
+            <p>A pesar de todo lo malo, sigues siendo una buena mujer. No dejaste que el mundo te volviera amarga. Conservas un corazón puro, y eso, Marilin, es el mayor acto de rebeldía y fuerza que existe en este mundo.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Dedicación y Corazón</h1>
+            <p>Me encanta lo dedicada que eres. Cómo le pones el alma a lo que haces, cómo te esfuerzas por ser mejor cada día. Verte florecer a pesar de todo es el orgullo más grande de mi vida.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Eres Fundamental</h1>
+            <p>En este Día de la Mujer, quiero recordarte que eres el pilar que sostiene mi mundo. Tu fuerza nos enseña que no importa qué tan duro sea el pasado, siempre hay espacio para un futuro brillante.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Mi Promesa</h1>
+            <p>Prometo estar a tu lado para celebrar cada una de tus victorias. Nunca olvides que después de la noche más oscura, siempre nace una estrella, y esa estrella eres tú, mi valiente Marilin.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <div class="lotus">🪷</div>
+            <h1>Te amo, Marilin</h1>
+            <p>Gracias por ser mexicana, por ser valiente y por elegirme. Eres mi universo entero. <br><span class="highlight">¡Feliz Día de la Mujer, mi niña preciosa!</span></p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content-box">
+            <h1>Un detalle para ti</h1>
+            <p>Porque mereces todo lo hermoso de este mundo...</p>
+            <button class="btn-nav" style="position: relative; bottom: 0; right: 0; margin-top: 20px;" onclick="showGift()">Abre tu regalo</button>
+            
+            <div id="gift-container">
+                <p>Hortensias, Dalias, Rosas Moradas, Claveles y Petunias de Cielo Nocturno para mi reina.</p>
+                <img src="https://i.ibb.co/0jkZpqhT/98697d8a-6867-4fea-98d7-d113f83f4e95-removebg-preview.png" alt="Flores para Marilin" class="gift-img">
+                <p style="font-size: 0.9rem; margin-top: 10px;">(Imagina este ramo con los colores de tu alma)</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-nav prev" onclick="changeSlide(-1)">Anterior</button>
+    <button class="btn-nav next" onclick="changeSlide(1)">Siguiente</button>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('gift-container').style.display = 'none';
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        function showGift() {
+            const gift = document.getElementById('gift-container');
+            gift.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
